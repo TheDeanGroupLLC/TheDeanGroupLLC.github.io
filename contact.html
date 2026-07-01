@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | The Dean Group</title>
+  <meta name="description" content="Book a call, schedule office hours, or contact The Dean Group.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async>
+  </script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand-link" href="index.html" aria-label="The Dean Group home"><img class="brand-logo brand-badge-logo"
+          src="assets/logos/TheDeanGroup_TDG_Badge_MD.png" alt="The Dean Group"></a>
+      <nav class="nav-links" aria-label="Primary navigation"><a class="" href="index.html">Home</a>
+        <a class="" href="about.html">About</a>
+        <a class="" href="services.html">Services</a>
+        <a class="" href="past-performance.html">Past Performance</a>
+        <a class="active" href="contact.html">Contact</a>
+      </nav>
+      <a class="nav-cta" href="contact.html">Work With Us</a>
+      <button class="mobile-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="past-performance.html">Past Performance</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Contact</p>
+        <h1>Complex compliance challenges. Straightforward solutions. Let's talk.</h1>
+        <p class="lead">Whether you're a prime contractor building a bench, a grantee navigating an upcoming monitoring
+          visit, or a nonprofit ready to make compliance less overwhelming, we're ready to help.</p>
+      </div>
+    </section>
+    <section class="white-section" id="contact-options">
+      <div class="container">
+        <p class="eyebrow">Contact Options</p>
+        <div class="grid-3">
+          <article class="contact-option">
+            <h3>Schedule a Scoping Call</h3>
+            <p>Book a free 30-minute call to discuss your program and compliance needs.</p>
+            <p style="margin-top:1rem"><a class="btn btn-secondary" href=""
+                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/andelyn-thedeangroup/30min'});return false;">
+                Book a Call
+              </a></p>
+          </article>
+          <article class="contact-option">
+            <h3>Book Office Hours</h3>
+            <p>Have a specific compliance question? Book a 30-minute Office Hours slot. $90 per session.</p>
+            <p style="margin-top:1rem"><a class="btn btn-secondary" href=""
+                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/andelyn-thedeangroup/office-hours'});return false;">
+                Book Office Hours
+              </a></p>
+          </article>
+          <article class="contact-option">
+            <h3>Send a Message</h3>
+
+            <p>
+              Reach out directly to discuss consulting opportunities,
+              subcontracting partnerships, or general questions.
+            </p>
+
+            <p style="margin-top:1rem">
+              <a class="btn btn-secondary" href="mailto:Andelyn@TheDeanGroup.llc">
+                Send a Message
+              </a>
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div>
+          <p class="eyebrow">Contact Form</p>
+          <h2>Direct Contact</h2>
+
+          <div class="card white-card" style="margin-top:1rem; margin-bottom:2rem">
+            <h3 style="margin-bottom:.25rem">
+              Andelyn Nesbitt Rodriguez
+            </h3>
+
+            <p style="margin-bottom:1rem">
+              Principal
+            </p>
+
+            <p>
+              Andelyn@TheDeanGroup.llc
+            </p>
+
+            <p>
+              Columbia, South Carolina
+            </p>
+          </div>
+        </div>
+        <form action="https://formspree.io/f/mwvzznnn" method="POST" style="margin-top:2rem">
+          <div class="form-grid"><label>Name<input type="text" name="name" required></label><label>Organization<input
+                type="text" name="organization" required></label><label>Email<input type="email" name="email"
+                required></label><label>Phone<input type="tel" name="phone"></label></div><label class="full-field">How
+            can we help?<select name="topic" required>
+              <option value="" selected disabled>
+                Select a topic
+              </option>
+
+              <option value="AI Workshop">
+                AI Workshop
+              </option>
+
+              <option value="HOME compliance">
+                HOME Compliance
+              </option>
+
+              <option value="CDBG compliance">
+                CDBG Compliance
+              </option>
+
+              <option value="Environmental Review">
+                Environmental Review
+              </option>
+
+              <option value="Section 3">
+                Section 3
+              </option>
+
+              <option value="Technical Assistance & Training">
+                Technical Assistance/Training
+              </option>
+
+              <option value="Office Hours">
+                Office Hours
+              </option>
+
+              <option value="Retainer">
+                Retainer
+              </option>
+
+              <option value="Other">
+                Other
+              </option>
+
+            </select></label><label class="full-field">Message<textarea name="message" rows="6"
+              required></textarea></label><button type="submit" class="btn btn-primary"
+            style="width:100%;margin-top:1.2rem">Send Message</button>
+          <p class="form-note"></p>
+        </form>
+      </div>
+    </section>
+    <section class="prime-section">
+      <div class="container">
+        <div class="prime-card">
+          <p class="eyebrow">For Prime Contractors</p>
+          <p class="origin-copy">The Dean Group is available for subcontract engagements under Community Compass task
+            orders, IDIQ vehicles, and direct grantee consulting. SAM.gov registration active. WOSB certification in
+            process. Capability statement available upon request.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-logo-shell"><img class="footer-logo"
+            src="assets/logos/TheDeanGroup_Logo_Horizontal_Pinyon.png" alt="The Dean Group"></div>
+        <p style="color:rgba(255,255,255,.72);margin-top:.8rem">HUD Community Development & Technical Assistance</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a
+          href="past-performance.html">Past Performance</a><a href="contact.html">Contact</a>
+      </nav>
+      <div class="footer-contact">
+        <p>
+          <a href="mailto:Andelyn@TheDeanGroup.llc" class="footer-email">
+            Andelyn@TheDeanGroup.llc
+          </a>
+        </p>
+        <p>TheDeanGroup.llc</p>
+        <p>Columbia, South Carolina</p>
+      </div>
+    </div>
+    <div class="container copyright">© 2026 The Dean Group, LLC. All rights reserved. Women-Owned Small Business.</div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

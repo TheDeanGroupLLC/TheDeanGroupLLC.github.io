@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Dean Group | HUD Community Development & Technical Assistance</title>
+  <meta name="description"
+    content="Federal housing compliance consulting and technical assistance for HUD grantees and prime contractors.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Index page logo sizing adjustments */
+    .site-header .brand-logo {
+      width: min(320px, 52vw);
+      max-height: 86px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .hero-clean .hero-wordmark {
+      width: clamp(120px, 16vw, 190px);
+      max-width: 190px;
+      height: auto;
+      margin-bottom: 1.25rem;
+    }
+
+    @media (max-width: 700px) {
+      .site-header .brand-logo {
+        width: min(250px, 62vw);
+        max-height: 72px;
+      }
+
+      .hero-clean .hero-wordmark {
+        width: 130px;
+        max-width: 130px;
+      }
+    }
+
+    .origin-copy-card {
+      background: #F5F2EE;
+      border-left: 5px solid #2A7B73;
+      border-radius: 28px;
+      color: #1B3A6B;
+      padding: 2rem;
+      margin-top: 1.5rem;
+    }
+
+    .origin-copy-card .origin-copy {
+      color: #1B3A6B;
+    }
+
+
+    .logo-shell {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #F5F2EE;
+      border: 1px solid rgba(42, 123, 115, 0.18);
+      border-radius: 24px;
+      padding: 14px;
+      box-shadow: 0 14px 34px rgba(27, 58, 107, 0.10);
+    }
+
+    .hero-clean .logo-shell {
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-logo-shell {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #F5F2EE;
+      border-radius: 18px;
+      padding: 10px 12px;
+      max-width: 280px;
+    }
+
+    .footer-logo-shell .footer-logo {
+      margin: 0;
+      max-width: 100%;
+    }
+
+    @media (max-width: 700px) {
+      .logo-shell {
+        border-radius: 20px;
+        padding: 12px;
+      }
+
+      .footer-logo-shell {
+        max-width: 240px;
+      }
+    }
+
+
+    /* Circular shell specifically for the hero TDG badge to hide square PNG corners */
+    .hero-clean .logo-shell {
+      width: clamp(150px, 18vw, 220px);
+      height: clamp(150px, 18vw, 220px);
+      border-radius: 50%;
+      padding: 18px;
+      overflow: hidden;
+    }
+
+    .hero-clean .logo-shell .hero-wordmark {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 700px) {
+      .hero-clean .logo-shell {
+        width: 150px;
+        height: 150px;
+        padding: 14px;
+      }
+    }
+
+
+    /* Adjusted larger hero badge shell: keeps the circle but prevents logo clipping */
+    .hero-clean .logo-shell {
+      width: clamp(190px, 22vw, 280px);
+      height: clamp(190px, 22vw, 280px);
+      border-radius: 50%;
+      padding: 28px;
+      overflow: hidden;
+    }
+
+    .hero-clean .logo-shell .hero-wordmark {
+      width: 86%;
+      max-width: 86%;
+      height: auto;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 700px) {
+      .hero-clean .logo-shell {
+        width: 190px;
+        height: 190px;
+        padding: 24px;
+      }
+
+      .hero-clean .logo-shell .hero-wordmark {
+        width: 84%;
+        max-width: 84%;
+      }
+    }
+
+
+    /* Logo swap sizing: TDG badge in header, horizontal wordmark in hero */
+    .site-header .brand-badge-logo {
+      width: 56px;
+      max-width: 56px;
+      max-height: 56px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .hero-wordmark-shell {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      max-width: min(520px, 88vw);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-wordmark-shell .hero-wordmark {
+      width: 100%;
+      max-width: 520px;
+      height: auto;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 700px) {
+      .site-header .brand-badge-logo {
+        width: 46px;
+        max-width: 46px;
+        max-height: 46px;
+      }
+
+      .hero-wordmark-shell {
+        max-width: min(340px, 86vw);
+      }
+
+      .hero-wordmark-shell .hero-wordmark {
+        max-width: 340px;
+      }
+    }
+
+
+    /* Hero refinement: centered larger wordmark and tighter top spacing */
+    .hero.hero-clean {
+      padding-top: 3.25rem;
+    }
+
+    .hero-content {
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero-wordmark-shell {
+      justify-content: center;
+      max-width: min(680px, 92vw);
+      margin: 0 auto 1.5rem auto;
+    }
+
+    .hero-wordmark-shell .hero-wordmark {
+      max-width: 680px;
+    }
+
+    .hero-actions {
+      justify-content: center;
+    }
+
+    @media (max-width: 700px) {
+      .hero.hero-clean {
+        padding-top: 2.2rem;
+      }
+
+      .hero-wordmark-shell {
+        max-width: min(420px, 92vw);
+      }
+
+      .hero-wordmark-shell .hero-wordmark {
+        max-width: 420px;
+      }
+    }
+
+
+    /* Center the divider below the hero wordmark */
+    .hero-rule {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand-link" href="index.html" aria-label="The Dean Group home"><img class="brand-logo brand-badge-logo"
+          src="assets/logos/TheDeanGroup_TDG_Badge_MD.png" alt="The Dean Group"></a>
+      <nav class="nav-links" aria-label="Primary navigation"><a class="active" href="index.html">Home</a>
+        <a class="" href="about.html">About</a>
+        <a class="" href="services.html">Services</a>
+        <a class="" href="past-performance.html">Past Performance</a>
+        <a class="" href="contact.html">Contact</a>
+      </nav>
+      <a class="nav-cta" href="contact.html">Work With Us</a>
+      <button class="mobile-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="past-performance.html">Past Performance</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero-clean">
+      <div class="container hero-content">
+        <div class="hero-wordmark-shell"><img class="hero-wordmark"
+            src="assets/logos/TheDeanGroup_Logo_Horizontal_Pinyon.png" alt="The Dean Group"></div>
+        <div class="hero-rule" aria-hidden="true"></div>
+        <p class="eyebrow">Federal Housing Compliance Consulting</p>
+        <h1>Federal housing compliance is not a back-office function. It is how communities get served.</h1>
+        <p class="hero-copy">The Dean Group provides federal housing compliance consulting and technical assistance to
+          HUD grantees and prime contractors, translating complex regulatory requirements into practical action so that
+          the communities these programs were built to serve actually get served.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="contact.html">Work With Us</a>
+          <a class="btn btn-secondary" href="services.html">Our Services</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="white-section">
+      <div class="container">
+        <p class="eyebrow">Credentials</p>
+        <div class="credential-grid">
+          <div class="credential-card">
+            <div class="gold-rule"></div>14+ Years HUD CPD Experience
+          </div>
+          <div class="credential-card">
+            <div class="gold-rule"></div>15+ Section 3 Training Sessions Delivered
+          </div>
+          <div class="credential-card">
+            <div class="gold-rule"></div>40+ Part 58 Environmental Reviews Completed
+          </div>
+          <div class="credential-card">
+            <div class="gold-rule"></div>Featured on HUD Exchange
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <p class="eyebrow">The Gap We Fill</p>
+        <div class="grid-3">
+          <article class="card">
+            <div class="number-badge">01</div>
+            <h3>The funding is there.</h3>
+            <p>Congress held the line — $3.3B in CDBG, $1.25B in HOME, $12B+ in disaster recovery. Grantees have money
+              to spend.</p>
+          </article>
+          <article class="card">
+            <div class="number-badge">02</div>
+            <h3>The oversight is not.</h3>
+            <p>HUD's compliance workforce has been reduced by 23% or more. The federal support grantees relied on has
+              shrunk dramatically.</p>
+          </article>
+          <article class="card">
+            <div class="number-badge">03</div>
+            <h3>That gap is where we work.</h3>
+            <p>The Dean Group provides the compliance infrastructure HUD can no longer deliver — so grantees can meet
+              their obligations and serve their communities.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="white-section">
+      <div class="container">
+        <div class="intro-row">
+          <p class="eyebrow">What We Do</p>
+          <h2>Service Snapshot</h2>
+          <p style="margin-top:1rem;">The Dean Group provides compliance consulting, technical assistance, and training
+            across each of the areas
+            below. Engagements range from hands-on direct delivery to advisory support, depending on your organization's
+            needs and capacity. Custom curriculum development, facilitator-led workshops, and multi-day training series
+            are available as standalone engagements or as part of a broader consulting scope.</p>
+          <p style="margin-top:1rem; margin-bottom: 1rem;"><a class="btn btn-secondary" href="services.html">See Full
+              Service Descriptions</a>
+          </p>
+        </div>
+        <div></div>
+        <div class="grid-3">
+
+          <article class="service-tile">
+            <h3>
+              <a href="services.html#ai-literacy" class="service-title-link">
+                AI Literacy for HUD Compliance
+              </a>
+            </h3>
+            <p>Practical workshops teaching nonprofit housing staff to use AI tools for compliance workflows, income
+              calculations, and monitoring preparation.</p>
+          </article>
+
+          <article class="service-tile">
+            <h3>
+              <a href="services.html#home-home-arp" class="service-title-link">
+                HOME &amp; HOME-ARP
+              </a>
+            </h3>
+            <p>Program administration, income determination, long-term affordability monitoring, and regulatory
+              guidance.</p>
+          </article>
+
+          <article class="service-tile">
+            <h3>
+              <a href="services.html#cdbg" class="service-title-link">
+                CDBG &amp; CDBG-DR
+              </a>
+            </h3>
+            <p>National objectives documentation, timeliness management, subrecipient oversight, consolidated planning,
+              and disaster recovery program administration.</p>
+          </article>
+
+          <article class="service-tile">
+            <h3>
+              <a href="services.html#environmental-review" class="service-title-link">
+                Environmental Review (Part 58)
+              </a>
+            </h3>
+            <p>Part 58 environmental reviews for housing rehabilitation and development projects.</p>
+          </article>
+
+          <article class="service-tile">
+            <h3>
+              <a href="services.html#section-3" class="service-title-link">
+                Section 3 Compliance &amp; S3R Reporting
+              </a>
+            </h3>
+            <p>Expert training and compliance support for Section 3 — including labor hour tracking, subrecipient
+              documentation, IDIS reporting for CPD-funded projects, and S3R compliance support for projects with mixed
+              financing.</p>
+          </article>
+
+          <article class="service-tile">
+            <h3>
+              <a href="services.html#office-hours" class="service-title-link">
+                Office Hours
+              </a>
+            </h3>
+            <p>Office hours for organizations that need compliance support without a full project engagement</p>
+          </article>
+
+          <article class="service-tile">
+            <h3>
+              <a href="services.html#retainer" class="service-title-link">
+                Retainer
+              </a>
+            </h3>
+            <p>Monthly retainer arrangements providing guaranteed hours of on-call compliance support with priority
+              response.</p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+    <section class="navy-section">
+      <div class="container">
+        <p class="eyebrow">Origin Statement</p>
+        <div class="origin-copy-card">
+          <p class="origin-copy">Affordable housing compliance is not an abstract specialty for The Dean Group. Andelyn
+            Nesbitt Rodriguez, the firm's Principal and Founder, grew up in this work. Her grandmother built her career
+            at the New York City Housing Authority. Her parents each built careers leading community development
+            organizations serving communities throughout South Carolina using CDBG, HOME, and LIHTC funds.</p>
+          <p class="origin-copy" style="margin-top:1.5rem">Andelyn came to this work as an analyst and grew inside it as
+            a practitioner at a nonprofit community development organization, then administered it as a compliance
+            officer at the City of Columbia, South Carolina. Later, she developed and delivered national CPD training,
+            built compliance tools, authored workbooks, and guided jurisdictions in updating their policies, procedures,
+            and HUD reporting documents.</p>
+          <p class="origin-copy" style="margin-top:1.5rem">That full-circle perspective is what Andelyn offers. You
+            cannot just learn it. You have to live it.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-logo-shell"><img class="footer-logo"
+            src="assets/logos/TheDeanGroup_Logo_Horizontal_Pinyon.png" alt="The Dean Group"></div>
+        <p style="color:rgba(255,255,255,.72);margin-top:.8rem">HUD Community Development & Technical Assistance</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a
+          href="past-performance.html">Past Performance</a><a href="contact.html">Contact</a>
+      </nav>
+      <div class="footer-contact">
+        <p>
+          <a href="mailto:Andelyn@TheDeanGroup.llc" class="footer-email">
+            Andelyn@TheDeanGroup.llc
+          </a>
+        </p>
+        <p>TheDeanGroup.llc</p>
+        <p>Columbia, South Carolina</p>
+      </div>
+    </div>
+    <div class="container copyright">© 2026 The Dean Group, LLC. All rights reserved. Women-Owned Small Business.</div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

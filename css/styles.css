@@ -311,11 +311,11 @@ section {
 
 .origin-copy {
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(1.75rem, 3.4vw, 3rem);
-  max-width: 980px;
+  font-size: clamp(1.35rem, 2.3vw, 2rem);
+  max-width: 900px;
   margin: auto;
   text-align: center;
-  line-height: 1.2
+  line-height: 1.4;
 }
 
 .credential-grid {

@@ -14,31 +14,45 @@
     rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <style>
-    /* Index page logo sizing adjustments */
-    .site-header .brand-logo {
-      width: min(320px, 52vw);
-      max-height: 86px;
+    .site-header .brand-badge-logo {
+      width: 56px;
+      max-width: 56px;
+      max-height: 56px;
       height: auto;
       object-fit: contain;
     }
 
-    .hero-clean .hero-wordmark {
-      width: clamp(120px, 16vw, 190px);
-      max-width: 190px;
-      height: auto;
-      margin-bottom: 1.25rem;
+    .hero.hero-clean {
+      padding: 1rem 0 6rem;
     }
 
-    @media (max-width: 700px) {
-      .site-header .brand-logo {
-        width: min(250px, 62vw);
-        max-height: 72px;
-      }
+    .hero-content {
+      align-items: center;
+      text-align: center;
+    }
 
-      .hero-clean .hero-wordmark {
-        width: 130px;
-        max-width: 130px;
-      }
+    .hero-wordmark-shell {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      max-width: min(820px, 94vw);
+      margin: 0 auto 1.5rem auto;
+    }
+
+    .hero-wordmark-shell .hero-wordmark {
+      width: 100%;
+      max-width: 820px;
+      height: auto;
+      margin-bottom: 0;
+    }
+
+    .hero-actions {
+      justify-content: center;
+    }
+
+    .hero-rule {
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .origin-copy-card {
@@ -48,132 +62,24 @@
       color: #1B3A6B;
       padding: 2rem;
       margin-top: 1.5rem;
+      max-width: 860px;
+      margin: 1.5rem auto 0;
     }
 
     .origin-copy-card .origin-copy {
       color: #1B3A6B;
     }
 
-
-    .logo-shell {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: #F5F2EE;
-      border: 1px solid rgba(42, 123, 115, 0.18);
-      border-radius: 24px;
-      padding: 14px;
-      box-shadow: 0 14px 34px rgba(27, 58, 107, 0.10);
+    .hero.hero-clean h1 {
+      font-size: clamp(2.4rem, 4.8vw, 4.8rem);
+      max-width: 920px;
+      margin: 0 auto;
     }
 
-    .hero-clean .logo-shell {
-      margin-bottom: 1.25rem;
-    }
-
-    .footer-logo-shell {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: #F5F2EE;
-      border-radius: 18px;
-      padding: 10px 12px;
-      max-width: 280px;
-    }
-
-    .footer-logo-shell .footer-logo {
-      margin: 0;
-      max-width: 100%;
-    }
-
-    @media (max-width: 700px) {
-      .logo-shell {
-        border-radius: 20px;
-        padding: 12px;
-      }
-
-      .footer-logo-shell {
-        max-width: 240px;
-      }
-    }
-
-
-    /* Circular shell specifically for the hero TDG badge to hide square PNG corners */
-    .hero-clean .logo-shell {
-      width: clamp(150px, 18vw, 220px);
-      height: clamp(150px, 18vw, 220px);
-      border-radius: 50%;
-      padding: 18px;
-      overflow: hidden;
-    }
-
-    .hero-clean .logo-shell .hero-wordmark {
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      margin-bottom: 0;
-    }
-
-    @media (max-width: 700px) {
-      .hero-clean .logo-shell {
-        width: 150px;
-        height: 150px;
-        padding: 14px;
-      }
-    }
-
-
-    /* Adjusted larger hero badge shell: keeps the circle but prevents logo clipping */
-    .hero-clean .logo-shell {
-      width: clamp(190px, 22vw, 280px);
-      height: clamp(190px, 22vw, 280px);
-      border-radius: 50%;
-      padding: 28px;
-      overflow: hidden;
-    }
-
-    .hero-clean .logo-shell .hero-wordmark {
-      width: 86%;
-      max-width: 86%;
-      height: auto;
-      margin-bottom: 0;
-    }
-
-    @media (max-width: 700px) {
-      .hero-clean .logo-shell {
-        width: 190px;
-        height: 190px;
-        padding: 24px;
-      }
-
-      .hero-clean .logo-shell .hero-wordmark {
-        width: 84%;
-        max-width: 84%;
-      }
-    }
-
-
-    /* Logo swap sizing: TDG badge in header, horizontal wordmark in hero */
-    .site-header .brand-badge-logo {
-      width: 56px;
-      max-width: 56px;
-      max-height: 56px;
-      height: auto;
-      object-fit: contain;
-    }
-
-    .hero-wordmark-shell {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      max-width: min(520px, 88vw);
-      margin-bottom: 1.5rem;
-    }
-
-    .hero-wordmark-shell .hero-wordmark {
-      width: 100%;
-      max-width: 520px;
-      height: auto;
-      margin-bottom: 0;
+    .hero-copy {
+      max-width: 760px;
+      margin: 1.4rem auto 0;
+      text-align: center;
     }
 
     @media (max-width: 700px) {
@@ -183,61 +89,20 @@
         max-height: 46px;
       }
 
-      .hero-wordmark-shell {
-        max-width: min(340px, 86vw);
-      }
-
-      .hero-wordmark-shell .hero-wordmark {
-        max-width: 340px;
-      }
-    }
-
-
-    /* Hero refinement: centered larger wordmark and tighter top spacing */
-    .hero.hero-clean {
-      padding-top: 3.25rem;
-    }
-
-    .hero-content {
-      align-items: center;
-      text-align: center;
-    }
-
-    .hero-wordmark-shell {
-      justify-content: center;
-      max-width: min(680px, 92vw);
-      margin: 0 auto 1.5rem auto;
-    }
-
-    .hero-wordmark-shell .hero-wordmark {
-      max-width: 680px;
-    }
-
-    .hero-actions {
-      justify-content: center;
-    }
-
-    @media (max-width: 700px) {
       .hero.hero-clean {
-        padding-top: 2.2rem;
+        padding: 1rem 0 4.5rem;
       }
 
       .hero-wordmark-shell {
-        max-width: min(420px, 92vw);
+        max-width: min(500px, 94vw);
       }
 
       .hero-wordmark-shell .hero-wordmark {
-        max-width: 420px;
+        max-width: 500px;
       }
-    }
-
-
-    /* Center the divider below the hero wordmark */
-    .hero-rule {
-      margin-left: auto;
-      margin-right: auto;
     }
   </style>
+
 </head>
 
 <body>
@@ -267,8 +132,6 @@
       <div class="container hero-content">
         <div class="hero-wordmark-shell"><img class="hero-wordmark"
             src="assets/logos/TheDeanGroup_Logo_Horizontal_Pinyon.png" alt="The Dean Group"></div>
-        <div class="hero-rule" aria-hidden="true"></div>
-        <p class="eyebrow">Federal Housing Compliance Consulting</p>
         <h1>Federal housing compliance is not a back-office function. It is how communities get served.</h1>
         <p class="hero-copy">The Dean Group provides federal housing compliance consulting and technical assistance to
           HUD grantees and prime contractors, translating complex regulatory requirements into practical action so that
@@ -345,7 +208,7 @@
           <article class="service-tile">
             <h3>
               <a href="services.html#ai-literacy" class="service-title-link">
-                AI Literacy for HUD Compliance
+                Practical AI for HUD Compliance Workshop
               </a>
             </h3>
             <p>Practical workshops teaching nonprofit housing staff to use AI tools for compliance workflows, income
@@ -439,7 +302,7 @@
     <div class="container footer-grid">
       <div>
         <div class="footer-logo-shell"><img class="footer-logo"
-            src="assets/logos/TheDeanGroup_Logo_Horizontal_Pinyon.png" alt="The Dean Group"></div>
+            src="assets/logos/TheDeanGroup_Logo_Horizontal_Pinyon_Footer.png" alt="The Dean Group"></div>
       </div>
       <nav class="footer-links" aria-label="Footer navigation">
         <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a

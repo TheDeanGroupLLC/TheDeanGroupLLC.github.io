@@ -953,3 +953,35 @@ textarea:focus {
 .service-block {
   scroll-margin-top: 100px;
 }
+
+/* ===== Qualifications Package ===== */
+
+.qualifications-box {
+  background: #F5F2EE;
+  border-left: 5px solid var(--teal);
+  border-radius: 36px;
+  padding: 2rem 3rem;
+  margin-bottom: 2.5rem;
+  width: 100%;
+}
+
+.qualifications-box h3 {
+  margin: 0 0 0.6rem;
+}
+
+.qualifications-box p {
+  width: 100%;
+  max-width: none;
+  margin-bottom: 1.5rem;
+
+}
+
+.qualifications-box .btn {
+  margin-top: 0.75rem;
+}
+
+.qualifications-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}

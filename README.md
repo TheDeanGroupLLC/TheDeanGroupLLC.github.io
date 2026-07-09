@@ -1,82 +1,137 @@
-# The Dean Group Static Website
+# The Dean Group Website
 
-This is a five-page static HTML/CSS/JS implementation based on the supplied website content and brand guide.
+![Website Preview](assets/images/site-preview.png)
 
-## Pages
+Official website for **The Dean Group, LLC**, a HUD Community Planning and Development (CPD) compliance consulting firm providing technical assistance, regulatory compliance, training, and strategic advisory services to public agencies, nonprofit organizations, and affordable housing stakeholders.
 
-- `index.html` — Home
-- `about.html` — About
-- `services.html` — Services
-- `past-performance.html` — Past Performance
-- `contact.html` — Contact
+**Live Website:** https://thedeangroup.llc
 
-## Asset filenames expected
+---
 
-Place the supplied PNG files in `assets/logos/` with exactly these names:
+## Overview
 
-- `TheDeanGroup_Logo_Vertical_Pinyon.png` — primary logo; used in the Home hero as the imported wordmark PNG.
-- `TheDeanGroup_Logo_Horizontal_Pinyon.png` — horizontal wordmark; used in the header and footer on every page.
-- `TheDeanGroup_TDG_Badge_MD.png` — secondary mark; used in the footer on every page.
-- `TheDeanGroup_Website_Header.png` — website header reference; reserved for future hero/header imagery if the client wants the header reference used visually.
+This repository contains the complete source code for The Dean Group website.
 
-Note: the uploaded manual text lists `TheDeanGroup_LinkedInBanner_Cream.png` as the website header reference, while the email note says `TheDeanGroup_Website_Header.png`. This project follows the newer email note filename. If the actual delivered file is named `TheDeanGroup_LinkedInBanner_Cream.png`, either rename it to `TheDeanGroup_Website_Header.png` or update the reference in this README.
+The site was designed as a lightweight, high-performance static website that showcases the firm's services, experience, qualifications, and representative work while remaining simple to maintain and deploy.
 
-## Verification against content guide
+---
 
-### Global
+## Website Structure
 
-- Five separate pages are present.
-- Navigation is clean and flat: Home, About, Services, Past Performance, Contact.
-- No dropdowns or subpages are used.
-- CSS is separated into `css/styles.css`.
-- JS is separated into `js/main.js`.
-- Base background is cream `#F5F2EE`.
-- Navy `#1B3A6B`, teal `#2A7B73`, gold `#C49A2A`, and cream `#F5F2EE` are defined as CSS variables.
-- PNG logo references are used; no text-created logo is used.
-- Mobile hamburger navigation is included.
+```
+/
+├── index.html                  Home
+├── about.html                  About
+├── services.html               Services
+├── past-performance.html       Past Performance
+├── contact.html                Contact
+│
+├── assets/
+│   ├── documents/
+│   ├── logos/
+│   ├── photos/
+│   └── icons/
+│
+├── css/
+│   └── styles.css
+│
+└── js/
+    └── main.js
+```
 
-### Home
+---
 
-- Hero includes the imported vertical wordmark PNG, headline, subheadline, and two buttons. The wordmark is not recreated as text and is not placed in a separate side card.
-- The Gap We Fill three-column section is included with the required copy.
-- Six service snapshot tiles are included with the required copy.
-- Full navy Origin Statement is included.
-- Credentials bar is included.
-- Footer appears on the page.
+## Features
 
-### About
+- Fully responsive design
+- Mobile navigation
+- Custom branding and typography
+- Internal page and section navigation
+- Qualifications Package download
+- Representative Past Performance portfolio
+- Contact form integration
+- GitHub Pages hosting
+- Lightweight HTML/CSS/JavaScript architecture
 
-- Page headline and subheadline are included.
-- Full origin story is included.
-- Principal section is included.
-- Advisory Board section with Luis Rodriguez and Veronica Rodriguez is included.
-- Program Expertise tags are included.
+---
 
-### Services
+## Technology Stack
 
-- Page headline and subheadline are included.
-- Seven service lines are included.
-- Pricing notes for Practical AI and Office Hours/Retainer are included.
-- How to Engage three-step process is included.
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- Git
+- GitHub Pages
 
-### Past Performance
+---
 
-- Page headline and subheadline are included.
-- Past performance cards are included.
-- NAICS codes and registrations are included.
+## Local Development
 
-### Contact
+Clone the repository:
 
-- Page headline and subheadline are included.
-- Three contact options are included.
-- Contact form fields match the spec.
-- Direct contact and subcontracting note are included.
-- Calendly placeholders are included for later replacement.
+```bash
+git clone git@github.com:TheDeanGroupLLC/TheDeanGroupLLC.github.io.git
+```
 
-## Before launch
+Open the project in Visual Studio Code and launch using Live Server (recommended), or simply open `index.html` in your browser.
 
-1. Add the real PNG logo files to `assets/logos/`.
-2. Replace Calendly placeholder blocks/links in `contact.html`.
-3. Connect the contact form to a form handler such as Formspree, Netlify Forms, or backend email service.
-4. Test all five pages on phone width and on desktop.
-5. Run a link check and verify logo paths load correctly.
+---
+
+## Deployment
+
+The website is hosted using **GitHub Pages**.
+
+Changes pushed to the `main` branch are automatically published to:
+
+https://thedeangroup.llc
+
+---
+
+## Repository
+
+```
+TheDeanGroupLLC.github.io/
+
+assets/
+css/
+js/
+
+index.html
+about.html
+services.html
+past-performance.html
+contact.html
+README.md
+```
+
+---
+
+## Maintenance
+
+When making updates:
+
+1. Pull the latest changes from the `main` branch.
+2. Make edits locally.
+3. Test all modified pages.
+4. Commit changes with a descriptive commit message.
+5. Push to the `main` branch.
+6. Verify the deployment on GitHub Pages.
+7. Confirm changes are live at https://thedeangroup.llc.
+
+---
+
+## Contact
+
+**The Dean Group, LLC**
+
+Website: https://thedeangroup.llc
+
+Email: Andelyn@TheDeanGroup.llc
+
+---
+
+## Copyright
+
+© The Dean Group, LLC. All rights reserved.
+
+The contents of this repository, including website design, text, graphics, branding, publications, and supporting materials, are proprietary to The Dean Group, LLC. No portion may be reproduced or distributed without prior written permission.
